@@ -146,7 +146,7 @@
           <div class="footersectioncontecttext">
             <span>
               <a color="white" v-for="icon in iconLinks" :key="icon" :class="icon.icon" :icon="icon.icon"
-                :href="icon.link" class="btnicon" variant="text">
+                :href="icon.link" :rel="icon.rel" class="btnicon" variant="text">
               </a>
             </span>
             <br>
@@ -164,9 +164,9 @@
             <br>
             <h5><strong> 學生計算機年會 Students' Information Technology Conference </strong></h5>
             <br>
-            <h5><strong> Google 學生開發者社團 Google Developer Student Clubs Taiwan & Hong Kong </strong>st></h5>
+            <h5><strong> Google 學生開發者社團 Google Developer Student Clubs Taiwan & Hong Kong </strong></h5>
             <br>
-            <p>合作聯繫:<br><a href="mailto://contact@sitcon.org">contact@sitcon.org</a> </p>
+            <p>合作聯繫：<br><a href="mailto:contact@sitcon.org">contact@sitcon.org</a> </p>
             <p>{{ new Date().getFullYear() }} — <strong>SITCON X GDSC</strong></p>
           </div>
         </div>
@@ -245,7 +245,8 @@ export default {
       {
         name: "Mastodon",
         link: "https://g0v.social/@sitcontw",
-        icon: "bi-mastodon"
+        icon: "bi-mastodon",
+        rel: "me"
       }
     ],
     years: [2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
